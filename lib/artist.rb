@@ -7,6 +7,7 @@ class Artist
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
   include Paramable::InstanceMethods
+  include Memorable::InstanceMethods
 
   @@artists = []
 
@@ -29,5 +30,5 @@ class Artist
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
-  
+
 end
